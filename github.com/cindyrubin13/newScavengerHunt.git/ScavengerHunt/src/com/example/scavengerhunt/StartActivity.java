@@ -11,7 +11,6 @@ public class StartActivity extends Activity {
 	class InitializeParseTask extends AsyncTask {
 		@Override
 		protected Object doInBackground(Object... params) {
-			// Login to parse
 			ScavengerHuntApplication.getInstance().initializeParse();
 			return null;
 		}

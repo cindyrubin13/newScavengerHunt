@@ -2,7 +2,7 @@
 <resources>
 
     
-    <string name="hello">Welcome to Mercury Game</string>
+    <string name="hello">Welcome to Scavenger Hunt Game</string>
     
     <string name="app_version">1.0</string>
     <string name="app_name">ScavengerHunt</string>

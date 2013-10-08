@@ -1,5 +1,6 @@
 package com.example.scavengerhunt;
 
+
 import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseUser;
@@ -17,7 +18,7 @@ import android.widget.Toast;
  */
 public class ScavengerHuntApplication extends Application {
 
-    private static final String TAG = "MercuryGameApplication";
+    private static final String TAG = "ScavengerHuntApplication";
     private static final int START_WAIT_TIME = 3000; // 3 seconds
 
     private static ScavengerHuntApplication instance;
@@ -59,3 +60,8 @@ public class ScavengerHuntApplication extends Application {
     }
 
 }
+
+
+
+
+   
