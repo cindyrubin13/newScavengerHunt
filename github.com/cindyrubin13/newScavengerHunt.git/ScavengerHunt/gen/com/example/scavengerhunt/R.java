@@ -26,27 +26,32 @@ public final class R {
         public static final int splash_logo=0x7f020002;
     }
     public static final class id {
-        public static final int SplashLayout=0x7f080008;
-        public static final int action_settings=0x7f08000c;
-        public static final int loginbutton_cancel=0x7f080004;
-        public static final int loginbutton_continue=0x7f080003;
-        public static final int mainMenuButton_joinGame=0x7f080006;
-        public static final int mainMenuButton_myGames=0x7f080007;
-        public static final int mainMenuButton_newGame=0x7f080005;
-        public static final int menuitem_logout=0x7f08000d;
-        public static final int menuitem_prefs=0x7f08000e;
-        public static final int splash_appver_text_view=0x7f08000b;
-        public static final int splash_image_view=0x7f080009;
-        public static final int splash_text_view=0x7f08000a;
-        public static final int textbox_loginEmail=0x7f080002;
-        public static final int textbox_loginPassword=0x7f080001;
-        public static final int textbox_loginUsername=0x7f080000;
+        public static final int SplashLayout=0x7f08000a;
+        public static final int action_settings=0x7f08000e;
+        public static final int listview=0x7f080003;
+        public static final int loginbutton_cancel=0x7f080009;
+        public static final int loginbutton_continue=0x7f080008;
+        public static final int mainMenuButton_joinGame=0x7f080001;
+        public static final int mainMenuButton_myGames=0x7f080002;
+        public static final int mainMenuButton_newGame=0x7f080000;
+        public static final int menuitem_logout=0x7f08000f;
+        public static final int menuitem_prefs=0x7f080010;
+        public static final int splash_appver_text_view=0x7f08000d;
+        public static final int splash_image_view=0x7f08000b;
+        public static final int splash_text_view=0x7f08000c;
+        public static final int textItem=0x7f080004;
+        public static final int textbox_loginEmail=0x7f080007;
+        public static final int textbox_loginPassword=0x7f080006;
+        public static final int textbox_loginUsername=0x7f080005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int login=0x7f030001;
-        public static final int mainmenu=0x7f030002;
-        public static final int splash=0x7f030003;
+        public static final int games=0x7f030001;
+        public static final int indoor=0x7f030002;
+        public static final int listview_item=0x7f030003;
+        public static final int login=0x7f030004;
+        public static final int mainmenu=0x7f030005;
+        public static final int splash=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -61,6 +66,7 @@ public final class R {
         public static final int hint_email=0x7f050013;
         public static final int hint_password=0x7f050011;
         public static final int hint_username=0x7f05000f;
+        public static final int label_around_town=0x7f050026;
         /**  Generic 
          */
         public static final int label_cancel=0x7f050007;
@@ -70,6 +76,7 @@ public final class R {
          */
         public static final int label_enterUsernamePasswordEmail=0x7f05000d;
         public static final int label_gamesiamplaying=0x7f050021;
+        public static final int label_indoor_newgame=0x7f050024;
         public static final int label_joingame=0x7f050022;
         public static final int label_loginEmailAlreadyExists=0x7f05001d;
         public static final int label_loginErrorMessage=0x7f05001a;
@@ -79,6 +86,8 @@ public final class R {
         public static final int label_login_please_wait=0x7f050016;
         public static final int label_mygames=0x7f050020;
         public static final int label_newgame=0x7f05001f;
+        public static final int label_newgame_options=0x7f050023;
+        public static final int label_outdoor_game=0x7f050025;
         public static final int label_password=0x7f050010;
         public static final int label_queryErrorMessage=0x7f050018;
         public static final int label_query_in_progress=0x7f050017;

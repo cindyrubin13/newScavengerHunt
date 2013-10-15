@@ -1,6 +1,7 @@
 package com.example.scavengerhunt;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -9,12 +10,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 public class MainMenuActivity extends Activity {
 	private Button newGameButton;
 	private Button joinGameButton;
 	private Button myGamesButton;
+	private Button listGames;
 	@SuppressWarnings("unused")
 	// This member will be used for actual game play, which is why it's
 	// but since no game play code exists yet, it's unused in this activity
@@ -39,9 +42,17 @@ public class MainMenuActivity extends Activity {
 		newGameButton = (Button) findViewById(R.id.mainMenuButton_newGame);
 		newGameButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+			//    listGames = (Button) findViewById(R.id.mainMenuButton_newGame);
+			    
 				// XXX open NewGameActivity
-				// Intent i = new Intent(mThisActivity, NewGameActivity.class);
-				// mThisActivity.startActivity(i);
+			 // Intent i = new Intent(mThisActivity, games.class);
+				Intent i = new Intent(MainMenuActivity.this, NewGame.class);
+				 startActivity(i);
+				//ParseObject itemList = new ParseObject("IndoorGame");
+                //   itemList.put("gameId", 1); //integer
+			     //  itemList.put("itemId", 5); //integer
+			    //   itemList.put("itemDescription", "string"); //string
+			    //   itemList.saveInBackground();
 			}
 		});
 

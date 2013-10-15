@@ -48,4 +48,8 @@
     <string name="label_mygames">View My Games</string>
     <string name="label_gamesiamplaying">View Games I am Playing</string>
     <string name="label_joingame">Join a Game</string>
+    <string name="label_newgame_options">Which game would you like to play?</string>
+    <string name="label_indoor_newgame"> Indoor Game</string>
+    <string name="label_outdoor_game">Outdoor Game</string>
+    <string name="label_around_town">Around Town Game</string>
 </resources>

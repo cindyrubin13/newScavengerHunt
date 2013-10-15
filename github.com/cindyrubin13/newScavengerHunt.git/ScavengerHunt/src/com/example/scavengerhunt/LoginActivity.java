@@ -130,24 +130,6 @@ public class LoginActivity extends Activity {
                 }
                 getStoredData();
             }
-// created getStored Data method to retrieve data from parse
-            private void getStoredData() {
-                progressDialog = ProgressDialog.show(LoginActivity.this,
-                        getString(R.string.label_login_please_wait),
-                        getString(R.string.label_query_in_progress) + " '"
-                                + username + "'");
-
-                List<ParseQuery<ParseUser>> parseUserQueryList = new ArrayList<ParseQuery<ParseUser>>();
-
-                ParseQuery<ParseUser> parseUsernameQuery = ParseUser.getQuery();
-                parseUsernameQuery.whereEqualTo("username", username);
-                parseUserQueryList.add(parseUsernameQuery);
-                ParseQuery<ParseUser> parseEmailQuery = ParseUser.getQuery();
-                parseEmailQuery.whereEqualTo("email", email);
-                parseUserQueryList.add(parseEmailQuery);
-                ParseQuery<ParseUser> parseUserQuery = ParseQuery.or(parseUserQueryList);
-                parseUserQuery.findInBackground(userFindCallback); 
-            }
         });
 
         // Cancel button handler
@@ -243,5 +225,21 @@ public class LoginActivity extends Activity {
                         + "'");
         ParseUser.logInInBackground(username, password, loginCallback);
     }
+    private void getStoredData() {
+        progressDialog = ProgressDialog.show(LoginActivity.this,
+                getString(R.string.label_login_please_wait),
+                getString(R.string.label_query_in_progress) + " '"
+                        + username + "'");
 
+        List<ParseQuery<ParseUser>> parseUserQueryList = new ArrayList<ParseQuery<ParseUser>>();
+
+        ParseQuery<ParseUser> parseUsernameQuery = ParseUser.getQuery();
+        parseUsernameQuery.whereEqualTo("username", username);
+        parseUserQueryList.add(parseUsernameQuery);
+        ParseQuery<ParseUser> parseEmailQuery = ParseUser.getQuery();
+        parseEmailQuery.whereEqualTo("email", email);
+        parseUserQueryList.add(parseEmailQuery);
+        ParseQuery<ParseUser> parseUserQuery = ParseQuery.or(parseUserQueryList);
+        parseUserQuery.findInBackground(userFindCallback); 
+    }
 }
