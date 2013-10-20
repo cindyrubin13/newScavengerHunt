@@ -87,7 +87,7 @@ public final class R {
         public static final int hint_email=0x7f050013;
         public static final int hint_password=0x7f050011;
         public static final int hint_username=0x7f05000f;
-        public static final int label_another=0x7f050031;
+        public static final int label_another=0x7f050032;
         public static final int label_around_town=0x7f050027;
         /**  Generic 
          */
@@ -133,6 +133,7 @@ public final class R {
         public static final int parse_app_id=0x7f050005;
         public static final int parse_client_id=0x7f050006;
         public static final int selectdate=0x7f05002f;
+        public static final int selected=0x7f050031;
     }
     public static final class style {
         /** 

@@ -62,6 +62,7 @@
     <string name="label_end_date">Please Enter End Date</string>
     <string name="selectdate"> Please select date</string>
     <string name="label_input_each_item">Please input your item below:</string>
+    <string name="selected">Selected</string>
     
      <string name="label_another">Enter Y or N </string>
 </resources>
