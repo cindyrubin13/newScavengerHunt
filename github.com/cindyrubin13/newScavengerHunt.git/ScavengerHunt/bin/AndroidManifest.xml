@@ -27,6 +27,11 @@
         </activity>
         <activity android:name=".NewGame"></activity>
         <activity android:name=".IndoorGame"></activity>
+        <activity android:name=".SingleItemView"></activity>
+         <activity android:name=".CreateGame"></activity>
+        <activity android:name=".NewTitleInput"></activity>
+          <activity android:name=".ItemList"></activity>
+          <activity android:name=".AddItems"></activity>
         <!-- Login activity is started when the StartActivity is done with
         Parse.com initialization -->
         <activity android:name="LoginActivity" android:label="Login"></activity>

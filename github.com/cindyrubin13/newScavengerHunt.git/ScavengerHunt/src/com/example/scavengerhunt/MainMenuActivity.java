@@ -17,6 +17,7 @@ public class MainMenuActivity extends Activity {
 	private Button newGameButton;
 	private Button joinGameButton;
 	private Button myGamesButton;
+	private Button createGameButton;
 	private Button listGames;
 	@SuppressWarnings("unused")
 	// This member will be used for actual game play, which is why it's
@@ -73,6 +74,22 @@ public class MainMenuActivity extends Activity {
 				// mThisActivity.startActivity(i);
 			}
 		});
+		
+		createGameButton = (Button) findViewById(R.id.mainMenuButton_createGames);
+        createGameButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // XXX open MyGamesActivity
+                // Intent i = new Intent(mThisActivity, MyGamesActivity.class);
+                // mThisActivity.startActivity(i);
+                Intent i = new Intent(MainMenuActivity.this, CreateGame.class);
+                startActivity(i);
+               //ParseObject itemList = new ParseObject("IndoorGame");
+               //   itemList.put("gameId", 1); //integer
+                //  itemList.put("itemId", 5); //integer
+               //   itemList.put("itemDescription", "string"); //string
+               //   itemList.saveInBackground();
+            }
+        });
 
 	}
 
