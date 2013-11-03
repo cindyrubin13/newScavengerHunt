@@ -60,5 +60,15 @@
         android:textStyle="normal" 
         android:layout_marginBottom="10dp"
         />
+	<Button
+        android:id="@+id/mainMenuButton_playGames"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:text="@string/label_playgames"
+        android:textSize="16sp"
+        android:textStyle="normal" 
+        android:layout_marginBottom="10dp"
+        />
 
 </LinearLayout>

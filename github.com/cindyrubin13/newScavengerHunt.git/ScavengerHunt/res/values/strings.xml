@@ -49,20 +49,36 @@
     <string name="label_gamesiamplaying">View Games I am Playing</string>
     <string name="label_joingame">Join a Game</string>
     <string name="label_creategames">Create a New Game</string>
+     <string name="label_playgames">Play a Game</string>
     <string name="label_newgame_options">Which game would you like to play?</string>
     <string name="label_indoor_newgame"> Indoor Game</string>
     <string name="label_outdoor_game">Outdoor Game</string>
     <string name="label_around_town">Around Town Game</string>
     <string name="namelabel">"Item: "</string>
+     <string name="playerlabel">"Player: "</string>
     <string name="buttonCheck">Found It</string>
     <string name="label_game_title">Please enter the Game Title</string>
-    <string name="label_save_game">Save New Item</string>
+    <string name="label_save_item">Save Item</string>
+    <string name="label_done">Finished</string>
      <string name="another">Would you like to enter another item? (Y or N)</string>
     <string name="label_start_date">Please Enter Start Date</string>
     <string name="label_end_date">Please Enter End Date</string>
     <string name="selectdate"> Please select date</string>
     <string name="label_input_each_item">Please input your item below:</string>
     <string name="selected">Selected</string>
-    
+    <string name="get_answer">Click to get Selected Answer</string>
      <string name="label_another">Enter Y or N </string>
+     <string name="display_label">Display</string>
+     <string name="label_save_game">Save New Game</string>
+     <string name="update">Update</string>
+     <string name="delete">Delete</string>
+     <string name="update_item">Update Current Item</string>
+     <string name="label_playerlist">List of Players</string>
+      <string name="usernamelabel">User: </string>
+       <string name="emaillabel">Email: </string>
+       <string name="label_playgame">Choose a Game </string>
+       <string name="titlelabel">Title: </string>
+       <string name="gameidlabel">Game Id: </string>
+       <string name="gamelabel">Name of Game: </string>
+       
 </resources>

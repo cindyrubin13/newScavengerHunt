@@ -241,5 +241,7 @@ public class LoginActivity extends Activity {
         parseUserQueryList.add(parseEmailQuery);
         ParseQuery<ParseUser> parseUserQuery = ParseQuery.or(parseUserQueryList);
         parseUserQuery.findInBackground(userFindCallback); 
+        
+        
     }
-}
+    }

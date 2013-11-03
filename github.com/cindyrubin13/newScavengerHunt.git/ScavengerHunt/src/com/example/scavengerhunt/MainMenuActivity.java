@@ -3,6 +3,7 @@ package com.example.scavengerhunt;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,7 +19,7 @@ public class MainMenuActivity extends Activity {
 	private Button joinGameButton;
 	private Button myGamesButton;
 	private Button createGameButton;
-	private Button listGames;
+	private Button playGameButton;
 	@SuppressWarnings("unused")
 	// This member will be used for actual game play, which is why it's
 	// but since no game play code exists yet, it's unused in this activity
@@ -34,6 +35,8 @@ public class MainMenuActivity extends Activity {
 	public void onResume() {
 		super.onResume();
 		currentUser = ParseUser.getCurrentUser();
+		String currentUserObjectId = currentUser.getObjectId();
+		Log.i("main menu activity", "getting current user info " + currentUser.getObjectId());
 	}
 
 	/**
@@ -81,13 +84,24 @@ public class MainMenuActivity extends Activity {
                 // XXX open MyGamesActivity
                 // Intent i = new Intent(mThisActivity, MyGamesActivity.class);
                 // mThisActivity.startActivity(i);
-                Intent i = new Intent(MainMenuActivity.this, CreateGame.class);
+                Intent i = new Intent(MainMenuActivity.this, CreateGameMenu.class);
                 startActivity(i);
                //ParseObject itemList = new ParseObject("IndoorGame");
                //   itemList.put("gameId", 1); //integer
                 //  itemList.put("itemId", 5); //integer
                //   itemList.put("itemDescription", "string"); //string
                //   itemList.saveInBackground();
+            }
+        });
+        playGameButton = (Button) findViewById(R.id.mainMenuButton_playGames);
+        playGameButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // XXX open MyGamesActivity
+               //  Intent i = new Intent(MainMenuActivity.this, PlayGame.class);
+                // mThisActivity.startActivity(i);
+                Intent i = new Intent(MainMenuActivity.this, PlayGameMenu.class);
+               startActivity(i);
+               
             }
         });
 
