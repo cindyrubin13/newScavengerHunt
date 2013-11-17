@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/label_game_title"
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+    
+
+    <EditText
+        android:id="@+id/game_title"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:inputType="text"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:visibility="visible" />
+    <LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+      <Button
+        android:id="@+id/btnChangeDate"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Change Start Date" />
+      
+       <Button
+        android:id="@+id/btnChangeTime"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Change Start Time" />
+ </LinearLayout>
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Date (MM-DD-YYYY HH:MM): "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+ 
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+ 
+    <DatePicker
+        android:id="@+id/dpResult"
+        android:layout_height="fill_parent"
+        android:layout_weight=".33"
+        android:layout_width="0dip"
+        android:textSize="12sp"/>
+    
+    <TimePicker android:id="@+id/tpResult"
+        android:layout_height="fill_parent"
+        android:layout_weight=".33"
+        android:layout_width="0dip"
+        android:textSize="12sp"/>
+    
+   
+ <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="5dp"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnChangeDate2"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Change End Date" />
+    
+    <Button
+        android:id="@+id/btnChangeTime2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change End Time" />
+ </LinearLayout>
+    <TextView
+        android:id="@+id/lblDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Date (MM-DD-YYYY HH:MM): "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+ 
+    <TextView
+        android:id="@+id/tvDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+   
+    <DatePicker
+        android:id="@+id/dpResult2"
+        android:layout_height="fill_parent"
+        android:layout_weight=".33"
+        android:layout_width="0dip"
+        android:textSize="12sp"/>
+    
+    <TimePicker android:id="@+id/tpResult2"
+        android:layout_height="fill_parent"
+        android:layout_weight=".33"
+        android:layout_width="0dip"
+        android:textSize="12sp"/>
+   
+    
+   <!--  <Button
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+         
+        /> -->
+
+
+       
+       <Button
+           android:id="@+id/button2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:onClick="saveToParse"
+           android:text="@string/label_save_game" />
+   
+    </LinearLayout>

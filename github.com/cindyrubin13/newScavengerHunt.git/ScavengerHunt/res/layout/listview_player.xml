@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+     <CheckBox
+        android:id="@+id/playerCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="" />
+ 
+    <!--  <TextView
+        android:id="@+id/usernamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usernamelabel" 
+        android:layout_toRightOf="@+id/playerCheckBox" />-->
+ 
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/usernamelabel" />
+ 
+  <!--   <TextView
+        android:id="@+id/emaillabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernamelabel"
+        android:text="@string/emaillabel" 
+        android:layout_toRightOf="@+id/playerCheckBox" />
+ 
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_toRightOf="@+id/emaillabel" />-->
+ 
+   
+ 
+</RelativeLayout>

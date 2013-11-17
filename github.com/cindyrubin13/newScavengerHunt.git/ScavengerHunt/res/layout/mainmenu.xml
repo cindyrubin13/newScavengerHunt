@@ -17,7 +17,7 @@
         android:textSize="18.0sp"
         android:textStyle="bold" />
 
-	<Button
+	<!--  <Button
 	    android:id="@+id/mainMenuButton_newGame"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -37,7 +37,7 @@
         android:textSize="16sp"
         android:textStyle="normal" 
         android:layout_marginBottom="10dp"
-        />
+        />-->
 
 	<Button
 	    android:id="@+id/mainMenuButton_myGames"
@@ -70,5 +70,20 @@
         android:textStyle="normal" 
         android:layout_marginBottom="10dp"
         />
+	
+	<Button
+        android:id="@+id/mainMenuButton_players"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:text="@string/label_playerlist"
+        android:textSize="16sp"
+        android:textStyle="normal" 
+        android:layout_marginBottom="10dp"
+        />
+	
+	 
+	
+	
 
 </LinearLayout>

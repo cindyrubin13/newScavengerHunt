@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import com.parse.FindCallback;
 import com.parse.LogInCallback;
+import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -44,6 +45,9 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        //new code for push
+        ParseAnalytics.trackAppOpened(getIntent());
+        // end of code for push
         setupButtonCallbacks();
     }
 

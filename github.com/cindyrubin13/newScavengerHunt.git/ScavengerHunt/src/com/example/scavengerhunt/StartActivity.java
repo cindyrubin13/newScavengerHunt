@@ -1,5 +1,9 @@
 package com.example.scavengerhunt;
 
+import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
+import com.parse.PushService;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -12,6 +16,7 @@ public class StartActivity extends Activity {
 		@Override
 		protected Object doInBackground(Object... params) {
 			ScavengerHuntApplication.getInstance().initializeParse();
+			
 			return null;
 		}
 
@@ -32,6 +37,9 @@ public class StartActivity extends Activity {
 		setContentView(R.layout.splash);
 		// Create new thread to initialize Parse
 		new InitializeParseTask().execute();
+		
+		
 	}
+	
 
 }

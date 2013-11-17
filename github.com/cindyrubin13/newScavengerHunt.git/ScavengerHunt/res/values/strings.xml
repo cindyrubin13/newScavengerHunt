@@ -80,5 +80,9 @@
        <string name="titlelabel">Title: </string>
        <string name="gameidlabel">Game Id: </string>
        <string name="gamelabel">Name of Game: </string>
+       <string name="label_input_game_name">Enter the name of the game for the notification:</string>
+       <string name="label_existing_game">Edit Title or Start/ End Dates of a Game</string>
+       <string name="label_edit_game_title">Enter New Game Title </string>
+       <string name="label_save_updated_game">Save Changes</string>
        
 </resources>

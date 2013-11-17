@@ -20,6 +20,8 @@ public class MainMenuActivity extends Activity {
 	private Button myGamesButton;
 	private Button createGameButton;
 	private Button playGameButton;
+	private Button playerMenu;
+	private Button editExistingGame;
 	@SuppressWarnings("unused")
 	// This member will be used for actual game play, which is why it's
 	// but since no game play code exists yet, it's unused in this activity
@@ -43,7 +45,7 @@ public class MainMenuActivity extends Activity {
 	 * Setup the Screen callbacks
 	 */
 	private void setupButtonCallbacks() {
-		newGameButton = (Button) findViewById(R.id.mainMenuButton_newGame);
+	/*	newGameButton = (Button) findViewById(R.id.mainMenuButton_newGame);
 		newGameButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 			//    listGames = (Button) findViewById(R.id.mainMenuButton_newGame);
@@ -52,26 +54,24 @@ public class MainMenuActivity extends Activity {
 			 // Intent i = new Intent(mThisActivity, games.class);
 				Intent i = new Intent(MainMenuActivity.this, NewGame.class);
 				 startActivity(i);
-				//ParseObject itemList = new ParseObject("IndoorGame");
-                //   itemList.put("gameId", 1); //integer
-			     //  itemList.put("itemId", 5); //integer
-			    //   itemList.put("itemDescription", "string"); //string
-			    //   itemList.saveInBackground();
+				
 			}
-		});
+		});*/
 
-		joinGameButton = (Button) findViewById(R.id.mainMenuButton_joinGame);
+		/*joinGameButton = (Button) findViewById(R.id.mainMenuButton_joinGame);
 		joinGameButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				// XXX open JoinGameActivity
 				// Intent i = new Intent(mThisActivity, JoinGameActivity.class);
 				// mThisActivity.startActivity(i);
 			}
-		});
+		});*/
 
 		myGamesButton = (Button) findViewById(R.id.mainMenuButton_myGames);
 		myGamesButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+			    Intent i = new Intent(MainMenuActivity.this, ViewMyGames.class);
+                startActivity(i);
 				// XXX open MyGamesActivity
 				// Intent i = new Intent(mThisActivity, MyGamesActivity.class);
 				// mThisActivity.startActivity(i);
@@ -82,15 +82,10 @@ public class MainMenuActivity extends Activity {
         createGameButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // XXX open MyGamesActivity
-                // Intent i = new Intent(mThisActivity, MyGamesActivity.class);
-                // mThisActivity.startActivity(i);
-                Intent i = new Intent(MainMenuActivity.this, CreateGameMenu.class);
+                
+                Intent i = new Intent(MainMenuActivity.this, CreateGame.class);
                 startActivity(i);
-               //ParseObject itemList = new ParseObject("IndoorGame");
-               //   itemList.put("gameId", 1); //integer
-                //  itemList.put("itemId", 5); //integer
-               //   itemList.put("itemDescription", "string"); //string
-               //   itemList.saveInBackground();
+               
             }
         });
         playGameButton = (Button) findViewById(R.id.mainMenuButton_playGames);
@@ -99,11 +94,31 @@ public class MainMenuActivity extends Activity {
                 // XXX open MyGamesActivity
                //  Intent i = new Intent(MainMenuActivity.this, PlayGame.class);
                 // mThisActivity.startActivity(i);
-                Intent i = new Intent(MainMenuActivity.this, PlayGameMenu.class);
+                Intent i = new Intent(MainMenuActivity.this, PlayGame.class);
                startActivity(i);
                
             }
         });
+        playerMenu = (Button) findViewById(R.id.mainMenuButton_players);
+        playerMenu.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getApplicationContext(), PlayerList.class);
+                startActivity(nextScreen);
+                
+            }
+        });
+     //   editExistingGame = (Button) findViewById(R.id.mainMenuButton_existing_game);
+    //    editExistingGame.setOnClickListener(new View.OnClickListener() {
+
+     //       @Override
+      //      public void onClick(View v) {
+      //          Intent nextScreen = new Intent(getApplicationContext(), EditExistingGameActivity.class);
+      //          startActivity(nextScreen);
+                
+       //     }
+    //    });
 
 	}
 
@@ -145,5 +160,5 @@ public class MainMenuActivity extends Activity {
 		}
 		return false;
 	}
-
 }
+

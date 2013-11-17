@@ -3,7 +3,10 @@ package com.example.scavengerhunt;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
+import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
 import com.parse.ParseUser;
+import com.parse.PushService;
 
 import android.app.Application;
 import android.content.Context;
@@ -47,6 +50,11 @@ public class ScavengerHuntApplication extends Application {
                 Log.i(TAG, "Parse.initialize - done");
                 // add some delay, to show the splash screen
                 wait(START_WAIT_TIME);
+                // new code for push notification
+                PushService.setDefaultPushCallback(this, MainMenuActivity.class);
+               
+                ParseInstallation.getCurrentInstallation().saveInBackground();
+                Log.i(TAG, "After push calls");
             }
         } catch (Exception ex) {
             Log.e(TAG + "." + "Exception in initializeParse", ex.getMessage());
