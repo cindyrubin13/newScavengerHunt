@@ -47,6 +47,7 @@
            <activity android:name=".ViewMyGames"></activity>
            <activity android:name=".EditExistingGameActivity"></activity>
            <activity android:name=".EditAGameActivity"></activity>
+           <activity android:name=".InvitedGame"></activity>
         <!-- Login activity is started when the StartActivity is done with
         Parse.com initialization -->
         <activity android:name="LoginActivity" android:label="Login"></activity>

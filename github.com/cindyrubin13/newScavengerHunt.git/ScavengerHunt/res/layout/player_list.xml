@@ -28,7 +28,7 @@
         android:visibility="visible" />
     
 
-    <EditText
+   <!--   <EditText
         android:id="@+id/gameName"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
@@ -37,7 +37,34 @@
         android:inputType="text"
         android:padding="10dp"
         android:singleLine="true"
-        android:visibility="visible" />
+        android:visibility="visible" />-->
+        
+         <Spinner
+            android:id="@+id/spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        
+            /> 
+            <TextView
+        android:id="@+id/tvGameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_spinner" 
+        android:visibility="invisible" />"
+ 
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGameId"
+        android:visibility="invisible" />
+          <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />  
+            
+            
 
        <ListView
            android:id="@+id/listview"

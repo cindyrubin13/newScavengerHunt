@@ -21,6 +21,7 @@ public class EditItem extends Activity {
     private EditText updateItem;
     private Button submitUpdate;
     private Button deleteButton;
+    private Button addButton;
     String objectId;
     String itemName;
     TextView currentItem;
@@ -48,6 +49,7 @@ public class EditItem extends Activity {
 
         submitUpdate = (Button) findViewById(R.id.updateButton);
         deleteButton = (Button) findViewById(R.id.deleteButton);
+        
          
         submitUpdate.setOnClickListener(new View.OnClickListener() {
          
@@ -86,6 +88,8 @@ public class EditItem extends Activity {
                 
             }
         });
+        
+        
         deleteButton.setOnClickListener(new View.OnClickListener() {
             
             @Override

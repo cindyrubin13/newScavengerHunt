@@ -1,6 +1,7 @@
 package com.example.scavengerhunt;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.content.Context;
@@ -120,21 +121,41 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
                 foundItems.put("itemObjectId", itemId);
                 foundItems.put("gameId", gameObjectId);
                 foundItems.put("userInfo", currentUserObjectId);
-               // foundItems.saveInBackground();
+                try
+                {
+                    foundItems.save();
+                }
+                catch(ParseException exc)
+                {
+                    Log.e("Scavenger hunt", "failed to save", exc);
+                }
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("foundItems");
                 query.whereEqualTo("itemObjectId", itemId);
                 query.whereEqualTo("gameId", gameObjectId);
-                query.getFirstInBackground(new GetCallback<ParseObject>() {
-                  public void done(ParseObject object, ParseException e) {
-                    if (object == null) {
-                       Toast.makeText(context, "You are the first to find the item", Toast.LENGTH_LONG).show();
+                query.findInBackground(new FindCallback<ParseObject>() {
+                  public void done(List<ParseObject> objects, ParseException e) {
+                      Date firstDate = objects.get(0).getCreatedAt();
+                      String foundUserId = objects.get(0).getString("userInfo");
+                      
+                      for(ParseObject o : objects)
+                      {
+                          if(o.getCreatedAt().before(firstDate))
+                          {
+                              firstDate = o.getCreatedAt();
+                              foundUserId = o.get("userInfo").toString();
+                          }
+                      }
+                      
+                      if(foundUserId.equals(currentUserObjectId))
+                      {
+                          Toast.makeText(context, "You are the first to find the item", Toast.LENGTH_LONG).show();
                        
-                      Log.d("score", "The getFirst request failed.");
+                          Log.d("score", "The getFirst request failed.");
                     } else {
-                        String userId = object.getString("userInfo");
+                        
                         
                         ParseQuery<ParseUser> userQuery = ParseUser.getQuery();
-                        userQuery.whereEqualTo("objectId", userId);
+                        userQuery.whereEqualTo("objectId", foundUserId);
                         userQuery.getFirstInBackground(new GetCallback<ParseUser>() {
                             public void done(ParseUser object, ParseException e) {
                                 if (object != null) {
@@ -145,18 +166,11 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
                             }
                         });
                     }
-                    foundItems.saveInBackground();
+                    
                     itemlist.get(position).isFound = true;
                     
-                    boolean candy = true;
-                    for(int i=0;i<itemlist.size() && candy;i++)
-                    {
-                        candy &= itemlist.get(i).isFound;
-                    }
-                    if(candy)
-                    {
-                        Toast.makeText(context, "Congradulations you won!!!", Toast.LENGTH_LONG).show();
-                    }
+                    if(allFound(itemlist))
+                            Toast.makeText(context, "Congradulations you won!!!", Toast.LENGTH_LONG).show();
                   }
                 });
                 holder.foundItButton.setEnabled(false);
@@ -185,6 +199,15 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
         });
     }
  
+    private static boolean allFound(List<GameItem> theItems)
+    {
+        for(GameItem gi : theItems)
+        {
+            if(!gi.isFound)
+                return false;
+        }
+        return true;
+    }
 }
        
         

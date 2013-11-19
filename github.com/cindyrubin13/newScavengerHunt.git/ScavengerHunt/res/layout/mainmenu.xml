@@ -26,7 +26,7 @@
 	    android:textSize="16sp"
 	    android:textStyle="normal" 
         android:layout_marginBottom="10dp"
-	    />
+	    />-->
 
     <Button
         android:id="@+id/mainMenuButton_joinGame"
@@ -37,7 +37,7 @@
         android:textSize="16sp"
         android:textStyle="normal" 
         android:layout_marginBottom="10dp"
-        />-->
+        />
 
 	<Button
 	    android:id="@+id/mainMenuButton_myGames"

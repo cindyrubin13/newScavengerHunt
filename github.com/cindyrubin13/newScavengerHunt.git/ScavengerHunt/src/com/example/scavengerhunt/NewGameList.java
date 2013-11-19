@@ -55,6 +55,7 @@ public class NewGameList extends Activity  {
     // end of new code
     private Button mainMenu;
     private Button editButton;
+    private Button addButton;
    
     List<String> items = new ArrayList<String>();
     
@@ -84,7 +85,18 @@ public class NewGameList extends Activity  {
             }
         });
         
-        
+        addButton = (Button) findViewById(R.id.addButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent nextScreen = new Intent(getApplicationContext(), ItemList.class);
+                nextScreen.putExtra("gameId", gameId);
+                startActivity(nextScreen);     
+                }
+                
+            }
+        );
         } 
  
     

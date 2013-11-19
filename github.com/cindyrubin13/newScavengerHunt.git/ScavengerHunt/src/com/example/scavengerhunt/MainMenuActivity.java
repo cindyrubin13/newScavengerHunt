@@ -58,14 +58,16 @@ public class MainMenuActivity extends Activity {
 			}
 		});*/
 
-		/*joinGameButton = (Button) findViewById(R.id.mainMenuButton_joinGame);
+		joinGameButton = (Button) findViewById(R.id.mainMenuButton_joinGame);
 		joinGameButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+			    Intent i = new Intent(MainMenuActivity.this, InvitedGame.class);
+                startActivity(i);
 				// XXX open JoinGameActivity
 				// Intent i = new Intent(mThisActivity, JoinGameActivity.class);
 				// mThisActivity.startActivity(i);
 			}
-		});*/
+		});
 
 		myGamesButton = (Button) findViewById(R.id.mainMenuButton_myGames);
 		myGamesButton.setOnClickListener(new OnClickListener() {

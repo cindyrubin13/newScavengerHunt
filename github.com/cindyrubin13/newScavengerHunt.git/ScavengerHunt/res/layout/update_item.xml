@@ -57,6 +57,8 @@
            android:onClick="saveToParse"
            android:text="@string/delete" />
      
+      
+     
      </LinearLayout>
   
     
