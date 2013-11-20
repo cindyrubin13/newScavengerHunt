@@ -23,6 +23,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 public class PlayAGameListViewAdapter extends BaseAdapter {
  // Declare Variables
@@ -54,10 +55,6 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
         
        
     }
-    
-    
-    
-    
     
     
     @Override
@@ -121,14 +118,25 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
                 foundItems.put("itemObjectId", itemId);
                 foundItems.put("gameId", gameObjectId);
                 foundItems.put("userInfo", currentUserObjectId);
-                try
+                
+                // new code
+                foundItems.saveInBackground(new SaveCallback(){
+                    public void done(ParseException e) {
+                        if (e== null) {
+                            
+                            Log.i("ParseStarterProjectActivity", "saved successfulyy after save in background " );
+                        
+                // end of new code
+               
+                
+               /* try
                 {
                     foundItems.save();
                 }
                 catch(ParseException exc)
                 {
                     Log.e("Scavenger hunt", "failed to save", exc);
-                }
+                }*/
                 ParseQuery<ParseObject> query = ParseQuery.getQuery("foundItems");
                 query.whereEqualTo("itemObjectId", itemId);
                 query.whereEqualTo("gameId", gameObjectId);
@@ -173,10 +181,18 @@ public class PlayAGameListViewAdapter extends BaseAdapter {
                             Toast.makeText(context, "Congradulations you won!!!", Toast.LENGTH_LONG).show();
                   }
                 });
+                //end of query
                 holder.foundItButton.setEnabled(false);
                 holder.foundItButton.setText("Got It!");
+               //// else goes here  
                 
-                
+                        }
+                        else{
+                            Log.e("ParseStarterProjectActivity", "in else portion save was no good");
+                        }
+                    }
+                });
+              
                 
             }});
         return view;      
