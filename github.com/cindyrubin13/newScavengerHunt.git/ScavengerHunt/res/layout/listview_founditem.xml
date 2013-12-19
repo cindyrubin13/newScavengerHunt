@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+ 
+    <TextView
+        android:id="@+id/foundItemID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/foundItButton"
+        android:layout_alignBottom="@+id/foundItButton"
+        android:layout_toRightOf="@+id/foundItButton"
+         android:text="hidden"
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/foundItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/foundItButton"
+        android:layout_alignBottom="@+id/foundItButton"
+        android:layout_toRightOf="@+id/foundItButton"
+         />
+      
+      
+     <TextView
+        android:id="@+id/foundItemUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/foundItButton"
+        android:layout_alignBottom="@+id/foundItButton"
+        android:layout_toRightOf="@+id/foundItButton"
+        android:text="" />
+    
+    
+
+
+    
+    
+    
+    </RelativeLayout>
+    
+    
+    
+     
+
+
+    

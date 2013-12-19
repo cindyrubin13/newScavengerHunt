@@ -49,7 +49,6 @@ public class PlayAGame extends Activity {
         itemlist = new ArrayList<GameItem>();
         ParseQuery<ParseObject> query = ParseQuery.getQuery("newItems");
         query.whereEqualTo("gameId", gameId);
-        //  query.whereNotEqualTo("beginDate", myDate);
           Log.i("scavenger Hunt", "in parse query"  + gameId);
           query.findInBackground(new FindCallback<ParseObject>() {
               public void done(List<ParseObject> objects, ParseException e) {
@@ -69,16 +68,11 @@ public class PlayAGame extends Activity {
                       }
                       listview = (ListView) findViewById(R.id.listview);
                       adapter = new PlayAGameListViewAdapter(PlayAGame.this,itemlist);
-                      
-                      //new code
                       Log.i("ScavengerHuntActivity", "items in post executte"  + itemlist);
-                     
                       listview.setAdapter(adapter);
-                
                   }
               else {
                   Log.e("Error in if and for loop", e.getMessage());
-                  // Something went wrong.
               }
             }
           });
